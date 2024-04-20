@@ -1,11 +1,11 @@
-// polls.module.ts
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
-import { PollsController } from './polls.controller'; // Corrected import
+import { PollsController } from './polls.controller';  
+import { PollsService } from './polls.service';
 
 @Module({
   imports: [ConfigModule.forRoot()],
   controllers: [PollsController],
-  providers: [],
+  providers: [PollsService],
 })
 export class PollsModule {}
